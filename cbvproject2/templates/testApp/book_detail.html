@@ -1,0 +1,15 @@
+{%extends 'testApp/base.html'%}
+{%block content%}
+<div class="container" align=center>
+  <div align=left>
+    <h1> <span style="color:red; font-size: 50px:">{{book.title}} </span> Book Information</h1> <hr>
+    <h2>Name of the Book : {{book.title}}</h2>
+    <h2>Author of the Book : {{book.author}}</h2>
+    <h2>No.of pages : {{book.pages}}</h2>
+    <h2>Price of the Book: {{book.price}}</h2>
+    <a href="/update/{{book.id}}" class="btn btn-primary btn-lg" >Update Book</a>&nbsp&nbsp&nbsp
+    <a href="/delete/{{book.id}}" class="btn btn-danger btn-lg" >Delete Book</a>&nbsp&nbsp&nbsp
+    <a href="/" class="btn btn-primary btn-lg" >Go Back to Books List</a>
+  </div>
+</div>
+{%endblock%}

@@ -1,0 +1,10 @@
+{%extends 'testApp/base.html'%}
+{%block content%}
+<div class="container" align=center>
+  <h1>Are you sure? You want to delete {{book.title}}</h1>
+  <form method="post"> {%csrf_token%}
+    <input type="submit" name="" class='btn btn-danger btn-lg' value="YES">    
+    <a href="/detail/{{book.id}}" class="btn btn-primary btn-lg" >No</a>
+  </form>
+</div>
+{%endblock%}
